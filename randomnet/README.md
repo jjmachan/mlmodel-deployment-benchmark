@@ -1,6 +1,6 @@
-## Sklearn - Iris Classifier
+## Tensorflow - A fully connected network
 
-This is a simple model build with sklearn. Very fast inference times (~=5ms).
+This is a simple Fully Connected Network build with TF. Avg inference times (~=100ms).
 
 Frameworks used
 
@@ -18,7 +18,7 @@ we use locust framework to load test the API
 `gunicorn flask_wsgi:app -b localhost:5000 -w <the num of workers>`
 
 2. Bentoml
-`bentoml serve-gunicorn -w <num of workers> iris_bundle`
+`bentoml serve-gunicorn -w <num of workers> tf_bundle`
 
 
 ### Load test with locust
@@ -33,6 +33,7 @@ something before deciding what works for you.
 
 ## My Take
 
-So this is a really light model compared to other deep learning based models so
-a simple flask api or fastapi endpoint is more than enough. Also using other
-options might bring the performance down too.
+This is where Bentoml and other advanced deployment options shine. We are able
+to save inference time and increase throughput with an idea called
+micro-batching. This batches together the requests in a specific time frame and
+hence you don't have to process it individually.

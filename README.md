@@ -20,3 +20,9 @@ know you sugetions.
 The type of model you are using significantly impacts the performance and the
 methods of deployment. ML can be used on a wide range of problems so even though
 I can't cover all cases, the aim is to cover the most popular ones.
+
+## Resouces
+
+[Optimize Response Time of your Machine Learning API in Production](https://www.sicara.ai/blog/optimize-response-time-api)
+
+[Micro-batching in Bentoml](https://docs.bentoml.org/en/latest/guides/micro_batching.html)
