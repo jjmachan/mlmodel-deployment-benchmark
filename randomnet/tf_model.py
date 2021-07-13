@@ -1,5 +1,6 @@
 from tensorflow.keras.layers import Dense
 from tensorflow.keras import Model, Input
+from tf_classifier import TFmodelService
 
 
 def build_big_model(
@@ -24,3 +25,6 @@ def build_big_model(
 
 if __name__ == '__main__':
     model = build_big_model()
+    svc = TFmodelService()
+    svc.pack('model', model)
+    svc.save_to_dir('./tf_bundle')
